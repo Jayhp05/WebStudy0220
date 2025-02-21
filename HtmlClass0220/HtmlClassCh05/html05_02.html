@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            padding: 50px 0 15px 0;
+			font-size: 24px;
+            font-weight: bold;
+        }
+
+        th, td {
+            padding: 10px 10px;
+            border: 1px solid black;
+        }
+
+        #th_line {
+            background-color: #F2F2F2;
+        }
+
+        .width150 { width: 150px; }
+
+		.width100 { width: 100px; }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>5월 과일 구입 현황</caption>
+        <tr id="th_line">
+            <th class="width150">과일명</th>
+			<th class="width100">수량</th>
+			<th class="width100">단가</th>
+			<th class="width150">가격</th>
+			<th class="width150">비고</th>
+        </tr>
+        <tr>
+            <td>사과</td>
+            <td>10</td>
+            <td>8,000원</td>
+            <td>80,000원</td>
+            <td rowspan="3">
+                배가<br>
+                너무 비싸다
+            </td>
+        </tr>
+        <tr>
+            <td>배</td>
+            <td>5</td>
+            <td>10,000원</td>
+            <td>50,000원</td>
+        </tr>
+        <tr>
+            <td>바나나</td>
+            <td>7</td>
+            <td>50,000원</td>
+            <td>35,000원</td>
+        </tr>
+        <tr>
+            <td>합계</td>
+            <td colspan="4">165,000원</td>
+        </tr>
+    </table>
+</body>
+</html>
