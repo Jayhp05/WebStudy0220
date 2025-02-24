@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼에 버튼 추가하기</title>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        th {
+            width: 120px;
+            text-align: right;
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+        td {
+            height: 40px;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        tr {
+            border: 1px solid rgb(236, 236, 236);
+            border-left: 0;
+            border-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">회원 정보 입력 폼</h2>
+    <form name="join_site" action="#">
+        <table>
+            <tr>
+                <th>이 름 &nbsp;&nbsp;</th>
+                <td>
+                    <input type="name" name="name" maxlength="10" size="20">
+                </td>
+            </tr>
+            <tr>
+                <th>휴대폰 번호 &nbsp;&nbsp;</th>
+                <td>
+                    <select name="number">
+                        <option value="first_num" selected>010</option>
+                        <option value="first_num2">011</option>
+                        <option value="first_num3">012</option>
+                        <option value="first_num4">013</option>
+                        <option value="first_num5">019</option>
+                    </select>-
+                    <input type="second_num" name="num" maxlength="4" size="5">-
+                    <input type="second_num" name="num" maxlength="4" size="5">
+                    <input type="image" src="연습문제_이미지/images/btn_authentication.gif" alt="인증하기">
+                </td>
+            </tr>
+            <tr>
+                <th>직 업 &nbsp;&nbsp;</th>
+                <td>
+                    <select name="job">
+                        <option value="base" selected>직업을 선택하세요</option>
+                        <option value="1">백엔드 개발자</option>
+                        <option value="2">프론트엔드 개발자</option>
+                        <option value="3">클라우드 개발자</option>
+                        <option value="4">DB 개발자</option>
+                        <option value="5">보안 분석가</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>취 미 &nbsp;&nbsp;</th>
+                <td>
+                    <input type="checkbox" name="hobby" value="1">영화감상 &nbsp;
+                    <input type="checkbox" name="hobby" value="2">골프 &nbsp;
+                    <input type="checkbox" name="hobby" value="3">낚시 &nbsp;
+                    <input type="checkbox" name="hobby" value="4">기타
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="buttons">
+                    <button type="submit">가입하기</button>&nbsp;&nbsp;
+                    <button type="reset">다시쓰기</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
