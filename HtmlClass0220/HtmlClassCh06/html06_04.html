@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼에 버튼 추가하기</title>
+    <style>
+        table {
+            width: 600px;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        th {
+            width: 120px;
+            text-align: right;
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+        td {
+            height: 40px;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+    </style>
+
+    <script>
+        function findZipcode(zipcode) {
+            alert('우편번호 : ' + zipcode);
+            name1.zipcode.value = zipcode;
+            if (zipcode == '12345') {
+                name1.address.value = '서울시 관악구 봉천동 서울대입구역';
+            }
+            else if (zipcode == '11111') {
+                name1.address.value = '서울시 강남구 역삼동';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 style="text-align: center;">폼에 버튼 추가하기</h2>
+    <form name="name1" action="#">
+        <table>
+            <tr>
+                <th rowspan="2">주소 : </th>
+                <td>
+                    <input type="text" name="zipcode" maxlength="5" size="15" readonly>
+                    <input type="button" value="우편번호 찾기" onclick="findZipcode('12345');">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="address" size="60" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="buttons">
+                    <input type="submit" value="전송하기">
+                    <input type="reset" value="다시쓰기">
+                    <input type="button" value="우편번호 찾기" onclick="findZipcode('11111');">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="buttons">
+                    <button type="submit">전송하기</button>
+                    <button type="reset">다시쓰기</button>
+                    <button type="button" onclick="findZipcode('11111');">우편번호 찾기</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
