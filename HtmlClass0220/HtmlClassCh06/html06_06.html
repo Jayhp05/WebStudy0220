@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>fieldset과 label 태그</h2>
+    <form name="form1">
+        <fieldset>
+            <legend>회원 필수 정보</legend>
+            <label>아이디 : <input type="text" name="id" maxlength="5" id="id"><br><br></label>
+            <label for="id">비밀번호 : </label><input type="password" name="pass" id="id"><br><br>
+            <label for="">비밀번호 확인 : <input type="password" name="pass_confirm" id="id"><br><br></label>
+        </fieldset>
+        <fieldset>
+            <legend>회원 추가 정보</legend>
+            직업 : <select name="job" id="job">
+                <option>직업을 선택하세요</option>
+                <option>직업을 선택하세요</option>
+                <option>직업을 선택하세요</option>
+            </select><br>
+
+        <label for="mail_receive">정보 메일 받음</label>
+        <input type="checkbox" name="mail_receive" id="mailreceive"><br>
+        결혼 여부 : 
+        <label><input type="radio" name="marital_status">기 혼</label>
+        <label><input type="radio" name="marital_status">미 혼</label>
+        </fieldset>
+
+        <div>
+            <input type="submit" value="가입하기">
+            <input type="reset" value="다시쓰기">
+        </div>
+    </form>
+</body>
+</html>
