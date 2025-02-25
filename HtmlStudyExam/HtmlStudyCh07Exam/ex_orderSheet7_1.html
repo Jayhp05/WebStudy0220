@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        .second_title {
+            font-size: large;
+            font-weight: bold;
+            color: rgb(192, 68, 230);
+        }
+
+        th {
+            text-align: left;
+        }
+
+        ul.custom-bullet {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul.custom-bullet li::before {
+            content: "□";
+            margin-right: 8px;
+        }
+
+        table {
+            padding-left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>상품 주문서</h1>
+
+    <form name="main" action="#">
+        <fieldset>
+            <legend class="second_title">고객 정보</legend>
+            <table>
+                <tr>
+                    <th>이름 &nbsp;&nbsp;&nbsp;</th>
+                    <td>
+                        <input type="name" name="name" maxlength="10" size="20" placeholder="여백없이 입력">
+                    </td>
+                </tr>
+                <tr>
+                    <th>연락처 &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <td>
+                        <input type="name" name="name" maxlength="10" size="20" placeholder="- 포함해서 입력">
+                    </td>
+                </tr>
+            </table>
+        </fieldset> <br>
+        <fieldset>
+            <legend class="second_title">배송지 정보</legend>
+            <table>
+                <tr>
+                    <th>주소 &nbsp;</th>
+                    <td>
+                        <input type="name" name="name" maxlength="10" size="40">
+                    </td>
+                </tr>
+                <tr>
+                    <th>전화번호 &nbsp;</th>
+                    <td>
+                        <input type="name" name="name" maxlength="10" size="20" placeholder="- 포함해서 입력">
+                    </td>
+                </tr>
+                <tr>
+                    <th>메모 &nbsp;</th>
+                    <td>
+                        <textarea rows="3" cols="40"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset> <br>
+        <fieldset>
+            <legend class="second_title">주문 정보</legend>
+            <table>
+                <tr>
+                    <td>
+                        <ul class="custom-bullet"><li>자바의 정석 (25,000원)  <input type="name" name="name" maxlength="10" size="5">권</li></ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul class="custom-bullet"><li>자바를 다루는 기술 (26,000원) <input type="name" name="name" maxlength="10" size="5">권</li></ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul class="custom-bullet"><li>이것이 자바다 (30,000원) <input type="name" name="name" maxlength="10" size="5">권</li></ul>
+                    </td>
+                </tr>
+            </table>
+        </fieldset><br>
+        <div class="buttons">
+            <input type="submit" value="주문하기">
+            <input type="reset" value="다시 작성">
+        </div>
+    </form>
+</body>
+</html>
